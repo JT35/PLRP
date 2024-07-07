@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plrp.LogsController">
+   <top>
+      <HBox prefHeight="495.0" prefWidth="616.0" BorderPane.alignment="CENTER">
+         <children>
+          <TabPane fx:id="tabs" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="573.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+              <Tab fx:id="sessionTab" text="Sessions">
+                <fx:include fx:id="sessionLog" source="session-log-view.fxml" />
+              </Tab>
+              <Tab fx:id="rentalTab" text="Rentals">
+                <fx:include fx:id="rentalLog" source="rental-log-view.fxml" />
+              </Tab>
+              <Tab fx:id="repairTab" text="Repairs">
+                <fx:include fx:id="repairLog" source="repair-log-view.fxml" />
+              </Tab>
+            </tabs>
+          </TabPane>
+            <Button mnemonicParsing="false" onAction="#onBackClick" prefHeight="28.0" prefWidth="57.0" text="Back">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Button>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

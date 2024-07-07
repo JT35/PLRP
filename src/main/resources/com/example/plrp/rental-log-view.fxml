@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plrp.RentalLogController">
+   <center>
+      <TableView fx:id="table" prefHeight="446.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="rentalId" prefWidth="146.5849163532257" text="RentalID" />
+          <TableColumn fx:id="sessionId" prefWidth="117.867919921875" text="SessionID" />
+            <TableColumn fx:id="name" prefWidth="163.50942993164062" text="Name" />
+            <TableColumn fx:id="tel" prefWidth="173.39620971679688" text="PhoneNo" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

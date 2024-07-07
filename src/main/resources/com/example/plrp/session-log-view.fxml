@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plrp.SessionLogController">
+   <center>
+      <TableView fx:id="table" prefHeight="446.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="session" prefWidth="146.5849163532257" text="SessionID" />
+          <TableColumn fx:id="itemId" prefWidth="117.867919921875" text="ItemID" />
+            <TableColumn fx:id="state" prefWidth="127.47171020507812" text="State" />
+            <TableColumn fx:id="timestamp" prefWidth="206.49060204174305" text="Timestamp" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

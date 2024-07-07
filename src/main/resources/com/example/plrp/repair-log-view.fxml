@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plrp.RepairLogController">
+   <center>
+         <TableView fx:id="table" prefHeight="446.0" prefWidth="600.0">
+            <columns>
+               <TableColumn fx:id="repairId" prefWidth="58.981141567230225" text="RepairID" />
+               <TableColumn fx:id="itemId" prefWidth="82.26412200927734" text="ItemID" />
+               <TableColumn fx:id="state" prefWidth="76.4906005859375" text="State" />
+               <TableColumn fx:id="timestamp" prefWidth="134.43397521972656" text="Timestamp" />
+               <TableColumn fx:id="requestedBy" prefWidth="92.1697998046875" text="Requested By" />
+               <TableColumn fx:id="comments" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="400.0" sortable="false" text="Comments" />
+            </columns>
+         </TableView>
+   </center>
+</BorderPane>

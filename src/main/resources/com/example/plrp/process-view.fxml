@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="615.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <TextField fx:id="barcodePrompt" alignment="CENTER" editable="false" focusTraversable="false" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="164.0" promptText="Barcode" translateX="25.0">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="model" alignment="CENTER" editable="false" prefHeight="66.0" prefWidth="128.0" promptText="Model" translateX="25.0">
+                     <font>
+                        <Font name="Arial" size="36.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#onBackClick" text="Back" translateX="192.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <bottom>
+      <VBox alignment="CENTER" prefHeight="158.0" prefWidth="165.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <Button fx:id="signInOutBtn" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onSignInOutClick" prefHeight="95.0" prefWidth="82.0" text="Signout">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="repairRequestBtn" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onRequestRepairClick" prefHeight="24.0" prefWidth="110.0" text="Request Repair">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onEditClick" prefHeight="93.0" prefWidth="91.0" text="Edit">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onUnregisterClick" prefHeight="16.0" prefWidth="101.0" text="Unregister">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font></Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="128.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets top="16.0" />
+         </BorderPane.margin>
+      </VBox>
+   </bottom>
+   <center>
+      <VBox alignment="CENTER_LEFT" prefHeight="194.0" prefWidth="131.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label maxWidth="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="112.0" text="Power Output (PO):">
+                     <HBox.margin>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </HBox.margin></Label>
+                  <TextField fx:id="powerOutput" editable="false" promptText="X.XJ">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font></TextField>
+               </children>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+            </HBox>
+            <Text fx:id="signedIn" fill="#00a300" strokeType="OUTSIDE" strokeWidth="0.0" text="Signed in" textAlignment="CENTER" translateX="5.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </VBox.margin>
+            </Text>
+            <Text fx:id="working" fill="#00a300" strokeType="OUTSIDE" strokeWidth="0.0" text="Working" textAlignment="CENTER" translateX="5.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </VBox.margin>
+            </Text>
+            <HBox>
+               <children>
+                  <Label text="Status:" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Text fx:id="available" fill="#00a300" strokeType="OUTSIDE" strokeWidth="0.0" text="Available" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="5.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="615.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plrp.InventoryController">
+    <top>
+        <HBox BorderPane.alignment="TOP_LEFT">
+            <children>
+                <Label contentDisplay="CENTER" text="Search:" textAlignment="CENTER">
+                    <font>
+                        <Font name="Arial" size="12.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                    </padding>
+                </Label>
+                <TextField fx:id="searchPrompt" focusTraversable="false" prefHeight="24.0" prefWidth="112.0" promptText="Barcode">
+                    <font>
+                        <Font name="Arial" size="12.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="4.0" />
+                    </HBox.margin>
+                </TextField>
+                <Label text="Filter:">
+                    <font>
+                        <Font name="Arial" size="12.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+                </Label>
+                <ChoiceBox fx:id="filterOptions" prefHeight="25.0" prefWidth="85.0">
+                    <HBox.margin>
+                        <Insets right="6.0" />
+                    </HBox.margin>
+                </ChoiceBox>
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#onViewClick" text="View">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></Button>
+                <Button alignment="CENTER" mnemonicParsing="false" onAction="#onBackClick" prefHeight="23.0" prefWidth="46.0" text="Back">
+                    <font>
+                        <Font name="Arial" size="12.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <HBox.margin>
+                        <Insets left="222.0" />
+                    </HBox.margin></Button>
+            </children>
+            <padding>
+                <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+            </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+        </HBox>
+    </top>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+            <HBox>
+               <children>
+                      <Label text="Matching:">
+                          <font>
+                              <Font name="Arial" size="12.0" />
+                          </font>
+                          <padding>
+                              <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                          </padding>
+                     <HBox.margin>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </HBox.margin>
+                      </Label>
+                  <Text fx:id="matchingResultCount" strokeType="OUTSIDE" strokeWidth="0.0" text="0 results">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="9.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <TableView fx:id="matchingResultsTable" prefHeight="358.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="mId" prefWidth="95.98114389181137" text="ItemID" />
+                <TableColumn fx:id="mModel" maxWidth="161.86791229248047" prefWidth="46.207542419433594" text="Model" />
+                  <TableColumn fx:id="mPowerOutput" minWidth="-Infinity" prefWidth="94.86792755126953" text="Power Output" />
+                  <TableColumn fx:id="mSignedOut" prefWidth="77.603759765625" text="Signed Out" />
+                  <TableColumn fx:id="mWorking" prefWidth="54.11322021484375" text="Working" />
+                  <TableColumn fx:id="mAvailable" prefWidth="60.0" text="Available" />
+                  <TableColumn fx:id="mRegistered" prefWidth="178.67919921875" text="Registered" />
+              </columns>
+               <VBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox>
+               <children>
+                      <Label fx:id="remainingHeader" text="Remaining:">
+                          <font>
+                              <Font name="Arial" size="12.0" />
+                          </font>
+                          <padding>
+                              <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                          </padding>
+                     <HBox.margin>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </HBox.margin>
+                      </Label>
+                  <Text fx:id="remainingResultCount" strokeType="OUTSIDE" strokeWidth="0.0" text="0 results">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="9.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <TableView fx:id="remainingResultsTable" prefHeight="385.0" prefWidth="600.0">
+               <columns>
+                  <TableColumn fx:id="rId" prefWidth="93.886814057827" text="ItemID" />
+                  <TableColumn fx:id="rModel" prefWidth="48.30187225341797" text="Model" />
+                  <TableColumn fx:id="rPowerOutput" prefWidth="93.4339599609375" text="Power Output" />
+                  <TableColumn fx:id="rSignedOut" prefWidth="74.94337463378906" text="Signed Out" />
+                  <TableColumn fx:id="rWorking" prefWidth="56.3585205078125" text="Working" />
+                  <TableColumn fx:id="rAvailable" prefWidth="59.41510009765625" text="Available" />
+                  <TableColumn fx:id="rRegistered" prefWidth="171.52825927734375" text="Registered" />
+               </columns>
+               <VBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" />
+               </VBox.margin>
+            </TableView>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
